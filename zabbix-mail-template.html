@@ -169,16 +169,17 @@
 			<tr>
 				<td align="center" valign="top">
 					<!-- / 700px container -->
-					<table class="container" border="0" cellpadding="0" cellspacing="0" width="700" bgcolor="#ffffff" style="width: 700px;">
+					<table class="container" border="0" cellpadding="6" cellspacing="" width="700" bgcolor="#ffffff" style="width: 600px;">
 						<tr>
 							<td align="center" valign="top">
 								<!-- / Header -->
 								<table class="container header" border="0" cellpadding="0" cellspacing="0" width="620" style="width: 620px;">
 									<tr>
 										<td style="padding: 30px 0 30px 0; border-bottom: solid 1px #24252a;" align="left">
-										<!--	<img src="COMPANY_LOGO" alt="" width="166" height="91" /> -->
+										<img src="https://github.com/gui-sousa/Zabbix-Mail-Template/raw/master/Logo%20BWG.png" alt="" width="200" height="80" /> 
 										</td>
 									</tr>
+		
 								</table>
 								<!-- /// Header -->
 
@@ -190,6 +191,7 @@
 
 									<tr>
 										<td class="hero-subheader__content" style="font-size: 16px; line-height: 27px; color: #969696; padding: 0 60px 90px 0;" align="left">
+											
 											<strong>Problema come&ccedil;ou as:</strong> {EVENT.TIME}		
 											<strong>no dia: </strong>{EVENT.DATE}<br />
 											<strong>Nome: </strong> {EVENT.NAME}<br />
@@ -198,7 +200,8 @@
 											<strong>Dados Operacionais: </strong> {EVENT.OPDATA}<br />
 											<strong>ID: </strong> {EVENT.ID}
                                             <br />{TRIGGER.URL}
-                                            <!--
+										
+                                           <!--
                                                <strong>Resolvido as:</strong> {EVENT.RECOVERY.TIME} 
                                                <strong>DATA:</strong> {EVENT.RECOVERY.DATE}<br />
                                                 <strong>Nome:</strong> {EVENT.NAME}<br />
@@ -207,6 +210,14 @@
                                                 <strong>Gravidade:</strong> {EVENT.SEVERITY}<br />
                                                 <strong> ID:</strong> {EVENT.ID}<br />
                                                 {TRIGGER.URL} 
+											-->	
+											<!--
+												<b>{USER.FULLNAME} {EVENT.UPDATE.ACTION} problema</b> 
+												em {EVENT.UPDATE.DATE} {EVENT.UPDATE.TIME}.
+												<br>{EVENT.UPDATE.MESSAGE}<br><br>
+												<b>Status agora:</b> {EVENT.STATUS}<br>
+												<b>Tempo:</b> {EVENT.AGE}<br>
+												<b>Reconhecido:</b> {EVENT.ACK.STATUS}.
                                             -->
                                 
 										</td>
@@ -220,8 +231,8 @@
 										  <td>
 											<table border="0" cellspacing="0" cellpadding="0">
 											  <tr>
-												<td align="center" style="border-radius: 3px;" bgcolor="#fc3f1e">
-												  <a class="button raised" href="http://172.1.80.61/zabbix/zabbix.php?action=problem.view" target="_blank" style="font-size: 14px; line-height: 14px; font-weight: 500; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; text-align: center; border-radius: 3px; padding: 10px 25px; border: 1px solid #fc3f1e; display: inline-block;">Ver Incidentes</a>
+												<td align="center" style="border-radius: 3px;" bgcolor="#fcb813">
+												  <a class="button raised" href="http://quaqua/zabbix.php?show=1&name=&inventory%5B0%5D%5Bfield%5D=type&inventory%5B0%5D%5Bvalue%5D=&evaltype=0&tags%5B0%5D%5Btag%5D=&tags%5B0%5D%5Boperator%5D=0&tags%5B0%5D%5Bvalue%5D=&show_tags=3&tag_name_format=0&tag_priority=&show_opdata=0&show_timeline=1&filter_name=&filter_show_counter=0&filter_custom_time=0&sort=clock&sortorder=DESC&age_state=0&show_suppressed=0&unacknowledged=0&compact_view=0&details=0&highlight_row=0&action=problem.view" target="_blank" style="font-size: 14px; line-height: 14px; font-weight: 500; font-family: Helvetica, Arial, sans-serif; color: #0d1117; text-decoration: none; text-align: center; border-radius: 3px; padding: 10px 25px; border: 1px solid #0d1117; display: inline-block;">Ver Incidentes</a>
 												</td>
 											  </tr>
 											</table>
@@ -231,9 +242,13 @@
 									</td>
 								  </tr>
 								  <!-- END BUTTON -->
+								
 							</td>
 						</tr>
 					</table>
+					<footer>
+						QUAQUA - <a href="email@quaqua.com.br">EMAIL@QUAQUA.COM.BR</a>
+					  </footer>
 				</td>
 			</tr>
 		</table>
